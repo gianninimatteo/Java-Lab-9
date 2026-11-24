@@ -61,10 +61,20 @@ public final class LambdaUtilities {
      *         otherwise.
      */
     public static <T> List<Optional<T>> optFilter(final List<T> list, final Predicate<T> pre) {
+        // Optional.empty();
+       // Optional.of("1");
         /*
          * Suggestion: consider Optional.filter
          */
-        return emptyList();
+        final List<Optional<T>> l = new ArrayList<>(list.size());
+        list.forEach(t -> {
+            if(pre.test(t)) {
+                l.add(Optional.of(t));
+            } else {
+                l.add(Optional.empty());
+            }
+        });
+        return l;
     }
 
     /**
@@ -86,7 +96,7 @@ public final class LambdaUtilities {
         return emptyMap();
     }
 
-    /**
+    /** 
      * @param map
      *            input map
      * @param def
@@ -114,6 +124,7 @@ public final class LambdaUtilities {
     @SuppressWarnings("PMD.SystemPrintln")
     public static void main(final String[] args) {
         final List<Integer> li = IntStream.range(1, 8).boxed().collect(Collectors.toList());
+        // [1,2,3,4,5,6,7]
         System.out.println(dup(li, x -> x + 100));
         /*
          * [1, 101, 2, 102, 3, 103, 4, 104, 5, 105, 6, 106, 7, 107]
