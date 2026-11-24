@@ -12,3 +12,5 @@ build/
 *.class
 *.DS_Store
 deleteme/
+
+.DS_Store

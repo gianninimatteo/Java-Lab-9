@@ -2,5 +2,5 @@
 
 ## Instructions
 
-Complete `LambdaUtilities` by using lambdas to implement useful operations on collections (lists, maps). 
-Verify the correctness of your solution through the provided test class, `TestLambdaUtilities`.
+Completa la classe `LambdaUtilities` utilizzando le espressioni lambda per implementare operazioni utili sulle collezioni (liste, mappe). 
+Verifica la correttezza della tua soluzione tramite la classe di test fornita, `TestLambdaUtilities`.
